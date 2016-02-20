@@ -1,0 +1,23 @@
+{
+  "name": "isomorphic-fetch-example",
+  "version": "0.0.0",
+  "description": "Example using fetch to create SDK which can be used in both client and server side",
+  "main": "api.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyvernnot/isomorphic-fetch-example.git"
+  },
+  "author": "wyvernnot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wyvernnot/isomorphic-fetch-example/issues"
+  },
+  "homepage": "https://github.com/wyvernnot/isomorphic-fetch-example#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "webpack": "^1.12.13"
+  }
+}
