@@ -48,28 +48,43 @@
 	 * Created by wyvern on 16/2/20.
 	 */
 
-	var fetch = __webpack_require__(1);
-
-	fetch('http://api.github.com/users/wyvernnot/repos')
-	    .then(res=>res.json())
-	    .then(res=>alert(res.length));
-
-
+	var api = __webpack_require__(1);
+	api.repos('oneapm')
+	 .then(function(res){
+	     alert(res.length);
+	 })
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Created by wyvern on 16/2/20.
+	 */
+
+	var fetch = __webpack_require__(2);
+
+	var repos = function(name){
+	    return fetch('https://api.github.com/users/'+name+'/repos')
+	        .then(res=>res.json())
+	}
+
+	exports.repos=repos;
+
+/***/ },
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// the whatwg-fetch polyfill installs the fetch() function
 	// on the global object (window or self)
 	//
 	// Return that as the export for use in Webpack, Browserify etc.
-	__webpack_require__(2);
+	__webpack_require__(3);
 	module.exports = self.fetch.bind(self);
 
 
 /***/ },
-/* 2 */
+/* 3 */
 /***/ function(module, exports) {
 
 	(function(self) {

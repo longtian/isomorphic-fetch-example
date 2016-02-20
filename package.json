@@ -4,7 +4,8 @@
   "description": "Example using fetch to create SDK which can be used in both client and server side",
   "main": "api.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "compile":"webpack --entry ./app/index.js --output-filename bundle.js"
   },
   "repository": {
     "type": "git",
